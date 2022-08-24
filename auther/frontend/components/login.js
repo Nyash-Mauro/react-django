@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = {username: "", password: ""};
+        this.state = {email: "", password: ""};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,7 +14,7 @@ class Login extends Component {
     }
 
     handleSubmit(event) {
-        alert('A username and password was submitted: ' + this.state.username + " " + this.state.password);
+        alert('A email and password was submitted: ' + this.state.email + " " + this.state.password);
         event.preventDefault();
     }
 
@@ -24,7 +24,7 @@ class Login extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Email:
-                        <input name="username" type="text" value={this.state.username} onChange={this.handleChange}/>
+                        <input name="email" type="text" value={this.state.email} onChange={this.handleChange}/>
                     </label>
                     <label>
                         Password:

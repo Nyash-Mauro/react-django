@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+from dotenv import load_dotenv
+import os 
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -145,14 +149,14 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
+os.getenv
+ACCOUNT_SID = os.getenv('ACCOUNT_SID')
+AUTH_TOKEN = os.getenv('AUTHTOKEN')
+DEFAULT_AUTO_FIELD = os.getenv('DEFAULT_AUTO_FIELD')
 
-ACCOUNT_SID = "AC1abcf45e786d6118236918ad32994f37"
-AUTH_TOKEN = "e19696e4208d191717a5d180a5ca8e80"
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend" 
-EMAIL_HOST = "smtp.gmail.com" 
-EMAIL_PORT = 587 
-EMAIL_USE_TLS = True 
-EMAIL_HOST_USER = "cheatcodes.dev@gmail.com"
-EMAIL_HOST_PASSWORD = "maurice.nyanja@90#"
+EMAIL_BACKEND =os.getenv('EMAIL_BACKEND') 
+EMAIL_HOST = os.getenv('EMAIL_HOST') 
+EMAIL_PORT = os.getenV('EMAIL_PORT')
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS') 
+EMAIL_HOST_USER =os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
